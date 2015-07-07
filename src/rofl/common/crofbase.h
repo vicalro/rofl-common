@@ -658,6 +658,17 @@ public:
 		return (not (rofctls.find(ctlid) == rofctls.end()));
 	};
 
+	std::list<rofl::cctlid>
+	list_ctls(
+		const rofl::cctlid& ctlid) {
+		std::list<rofl::cctlid> ctls_list;
+		for (std::map<rofl::cctlid, crofctl*>::iterator
+				it = rofctls.begin(); it != rofctls.end(); ++it) {
+			ctls_list.push_back(it->first);
+		}
+		return ctls_list;
+	}
+
 	/**@}*/
 
 public:
