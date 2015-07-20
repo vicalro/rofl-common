@@ -1790,8 +1790,10 @@ private:
 	rofl::crofctl_env*      env;
 	// handle for this crofctl instance
 	rofl::cctlid            ctlid;
+public:
 	// OFP control channel
 	rofl::crofchan          rofchan;
+private:
 	// pending OFP transactions
 	rofl::ctransactions     transactions;
 
